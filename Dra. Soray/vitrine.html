@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Soray Abbud - Odontologia Estética</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#4A4646',
+                        'brand-gray': '#67686A',
+                        'brand-rose': '#D4A392',
+                        'brand-bg': '#FDFBF7'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                        script: ['Great Vibes', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #4A4646;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(74, 70, 70, 0.4), rgba(74, 70, 70, 0.8)), url('https://i.ibb.co/zT808Ntt/sorayfoto1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Utilitários para o Carrossel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .filter-btn.active {
+            background-color: #D4A392 !important;
+            color: white !important;
+            border-color: #D4A392 !important;
+        }
+
+        .result-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .zoom-img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        .result-card:hover .zoom-img {
+            transform: scale(1.1) !important;
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="antialiased">
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-bg min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center relative">
+        <div data-aos="fade-up" class="relative z-10 flex flex-col items-center mt-10">
+            <!-- Foto de Perfil (Carregada do ImgBB) -->
+            <div
+                class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-brand-rose mb-6 shadow-2xl">
+                <img src="https://i.ibb.co/7xD4Gr3v/sorayfoto6.jpg" alt="Dra. Soray Abbud"
+                    class="w-full h-full object-cover object-top">
+            </div>
+
+            <h3
+                class="font-sans text-[10px] md:text-xs tracking-[0.3em] uppercase text-brand-rose font-semibold mb-2 drop-shadow-md">
+                Dra. Soray Abbud
+            </h3>
+
+            <h1 class="font-serif text-3xl md:text-5xl max-w-3xl mx-auto leading-tight mb-4 text-white drop-shadow-lg">
+                Estética Dental e Harmonização Orofacial
+            </h1>
+
+            <p
+                class="font-sans text-sm md:text-base font-light text-white/90 max-w-xl mx-auto mb-10 drop-shadow-md leading-relaxed tracking-wide">
+                Equilíbrio, identidade e ciência com foco em resultados naturais para mulheres +45.
+            </p>
+
+            <a href="https://wa.me/5521974518848"
+                class="inline-flex items-center gap-2 bg-[#D4A392] text-white px-8 py-4 rounded-full text-sm font-medium tracking-wide hover:bg-white hover:text-[#4A4646] transition-all shadow-lg">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825 0 6.938 3.112 6.938 6.937 0 3.825-3.113 6.938-6.938 6.938z" />
+                </svg>
+                Agendar avaliação
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. RESULTADOS REAIS -->
+    <section data-aos="fade-up" class="py-24 px-6 bg-white border-t border-[#FDFBF7] overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="font-sans text-xs tracking-[0.2em] uppercase text-brand-rose font-semibold mb-3">Resultados Reais</h3>
+                <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-4">Transformações que falam por si</h2>
+                <p class="font-sans font-light text-brand-gray text-sm mt-4">
+                    Explore nossos protocolos personalizados com foco em naturalidade.
+                </p>
+            </div>
+
+            <!-- FILTROS -->
+            <div class="flex flex-wrap justify-center items-center gap-3 mb-12">
+                <button onclick="filterResults('todos')" class="filter-btn active px-6 py-2 rounded-full border border-gray-200 text-xs font-medium tracking-widest uppercase transition-all hover:border-brand-rose" data-category="todos">Todos</button>
+                <button onclick="filterResults('facial')" class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-xs font-medium tracking-widest uppercase transition-all hover:border-brand-rose text-brand-gray" data-category="facial">Facial</button>
+                <button onclick="filterResults('dental')" class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-xs font-medium tracking-widest uppercase transition-all hover:border-brand-rose text-brand-gray" data-category="dental">Dental</button>
+                <button onclick="filterResults('labios')" class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-xs font-medium tracking-widest uppercase transition-all hover:border-brand-rose text-brand-gray" data-category="labios">Lábios</button>
+                
+                <!-- Indicador de Scroll para Celular -->
+                <div class="md:hidden flex items-center gap-1 text-brand-rose animate-pulse ml-2">
+                    <span class="text-[10px] uppercase tracking-tighter">Deslize</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </div>
+            </div>
+
+            <!-- CARROSSEL CONTAINER COM SETAS -->
+            <div class="relative group">
+                <!-- Seta Esquerda -->
+                <button onclick="scrollCarousel(-1)" class="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 p-3 rounded-full shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block hover:bg-brand-rose hover:text-white text-brand-rose">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+
+                <div id="results-container" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-10 px-4 -mx-4 scroll-smooth">
+                
+                <!-- Card 1 (Facial) -->
+                <div class="result-card snap-center shrink-0 w-[85vw] md:w-[400px]" data-category="facial">
+                    <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                        <div class="w-full h-56 bg-[#EAE3DC] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden relative mb-6">
+                            <img src="img_card1.png" class="absolute inset-0 w-full h-full object-contain p-2 zoom-img" alt="Bioestimuladores">
+                        </div>
+                        <h4 class="font-serif text-xl text-brand-dark mb-3">Associação de Toxina Botulínica e Preenchimentos</h4>
+                        <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">
+                            Suavização de linhas de expressão e reposição de volume facial de forma natural e harmônica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 (Facial) -->
+                <div class="result-card snap-center shrink-0 w-[85vw] md:w-[400px]" data-category="facial">
+                    <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                        <div class="w-full h-56 bg-[#EAE3DC] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden relative mb-6">
+                            <img src="img_card2.png" class="absolute inset-0 w-full h-full object-contain p-2 zoom-img" alt="Masculina">
+                        </div>
+                        <h4 class="font-serif text-xl text-brand-dark mb-3">Harmonização Masculina</h4>
+                        <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">
+                            Suavização de rugas e definição mandibular mantendo a força e naturalidade da face.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 (Facial) -->
+                <div class="result-card snap-center shrink-0 w-[85vw] md:w-[400px]" data-category="facial">
+                    <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                        <div class="w-full h-56 bg-[#EAE3DC] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden relative mb-6">
+                            <img src="https://i.ibb.co/GfvwmcJh/Antes-e-depois-modelo-pro-site-Soray-15.png" class="absolute inset-0 w-full h-full object-contain p-2 zoom-img" alt="Fios">
+                        </div>
+                        <h4 class="font-serif text-xl text-brand-dark mb-3">Fios de Sustentação</h4>
+                        <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">
+                            Efeito lifting imediato com redução da flacidez e contornos mais definidos através de preenchimento full face.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 (Dental) -->
+                <div class="result-card snap-center shrink-0 w-[85vw] md:w-[400px]" data-category="dental">
+                    <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                        <div class="w-full h-56 bg-[#EAE3DC] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden relative mb-6">
+                            <img src="img_card4.png" class="absolute inset-0 w-full h-full object-contain p-2 zoom-img" alt="Lentes">
+                        </div>
+                        <h4 class="font-serif text-xl text-brand-dark mb-3">Lentes de Contato Dental</h4>
+                        <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">
+                            Correção de forma e cor com porcelana de alta estética para um sorriso radiante.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 5 (Dental) -->
+                <div class="result-card snap-center shrink-0 w-[85vw] md:w-[400px]" data-category="dental">
+                    <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                        <div class="w-full h-56 bg-[#EAE3DC] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden relative mb-6">
+                            <img src="img_card5.png" class="absolute inset-0 w-full h-full object-contain p-2 zoom-img" alt="Prótese">
+                        </div>
+                        <h4 class="font-serif text-xl text-brand-dark mb-3">Prótese Protocolo</h4>
+                        <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">
+                            Reabilitação oral completa com segurança e funcionalidade sobre implantes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 6 (Lábios) -->
+                <div class="result-card snap-center shrink-0 w-[85vw] md:w-[400px]" data-category="labios">
+                    <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                        <div class="w-full h-56 bg-[#EAE3DC] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden relative mb-6">
+                            <img src="https://i.ibb.co/d44XYPNr/Antes-e-depois-modelo-pro-site-Soray-8.png" class="absolute inset-0 w-full h-full object-contain p-2 zoom-img" alt="Preenchimento Labial 1">
+                        </div>
+                        <h4 class="font-serif text-xl text-brand-dark mb-3">Preenchimento Labial</h4>
+                        <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">
+                            Volume sutil e hidratação profunda respeitando a anatomia facial original.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 7 (Lábios) -->
+                <div class="result-card snap-center shrink-0 w-[85vw] md:w-[400px]" data-category="labios">
+                    <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                        <div class="w-full h-56 bg-[#EAE3DC] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden relative mb-6">
+                            <img src="https://i.ibb.co/rRy3dbrw/Antes-e-depois-modelo-pro-site-Soray-7.png" class="absolute inset-0 w-full h-full object-contain p-2 zoom-img" alt="Lip Flip">
+                        </div>
+                        <h4 class="font-serif text-xl text-brand-dark mb-3">Preenchimento Labial</h4>
+                        <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">
+                            Volume sutil e contornos mais definidos, proporcionando hidratação e um aspecto rejuvenescido e natural.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- NOVO Card 8 (Lábios) -->
+                <div class="result-card snap-center shrink-0 w-[85vw] md:w-[400px]" data-category="labios">
+                    <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                        <div class="w-full h-56 bg-[#EAE3DC] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden relative mb-6">
+                            <img src="https://i.ibb.co/6cMp2r73/soray1.png" class="absolute inset-0 w-full h-full object-contain p-2 zoom-img" alt="Sorriso Gengival">
+                        </div>
+                        <h4 class="font-serif text-xl text-brand-dark mb-3">Correção de Sorriso Gengival</h4>
+                        <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">
+                            Aplicação estratégica de toxina botulínica para reduzir a exposição excessiva da gengiva, harmonizando o sorriso de forma sutil.
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <!-- NOVO Card 10 (Dental) -->
+                <div class="result-card snap-center shrink-0 w-[85vw] md:w-[400px]" data-category="dental">
+                    <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                        <div class="w-full h-56 bg-[#EAE3DC] bg-opacity-30 rounded-xl flex items-center justify-center overflow-hidden relative mb-6">
+                            <img src="https://i.ibb.co/Zz4cR2rs/soray.png" class="absolute inset-0 w-full h-full object-contain p-2 zoom-img" alt="Reabilitação Integrada">
+                        </div>
+                        <h4 class="font-serif text-xl text-brand-dark mb-3">Reabilitação Estética Integrada</h4>
+                        <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">
+                            A união perfeita de prótese de alta precisão, devolvendo a juventude e a harmonia total ao sorriso.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Seta Direita -->
+            <button onclick="scrollCarousel(1)" class="absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 p-3 rounded-full shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block hover:bg-brand-rose hover:text-white text-brand-rose">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+
+            <p class="text-center font-sans font-light text-xs text-brand-gray italic mt-4">
+                Deslize lateralmente para ver mais casos.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. PROVA SOCIAL -->
+    <section data-aos="fade-up" class="py-24 px-6 bg-[#FDFBF7]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="font-sans text-xs tracking-[0.2em] uppercase text-brand-rose font-semibold mb-3">Prova Social
+                </h3>
+                <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-4">O que dizem nossas pacientes</h2>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-brand-rose/10 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div class="flex gap-1 text-brand-rose mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="font-sans font-light italic text-brand-gray mb-6 leading-relaxed">
+                        "Profissionalismo e competência. A Dra. Soray explicou cada etapa e os resultados superaram
+                        minhas expectativas, tudo com muita naturalidade."
+                    </p>
+                    <p class="font-sans text-xs tracking-widest uppercase text-brand-dark font-medium">Fernanda S.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-brand-rose/10 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div class="flex gap-1 text-brand-rose mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="font-sans font-light italic text-brand-gray mb-6 leading-relaxed">
+                        "Resultado incrível! Me senti acolhida do início ao fim. O cuidado com a pele madura realmente
+                        faz a diferença, pareço descansada e não artificial."
+                    </p>
+                    <p class="font-sans text-xs tracking-widest uppercase text-brand-dark font-medium">Camila R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER CADA CORPO EXIGE ESTRATEGIA -->
+    <section data-aos="fade-up" class="bg-brand-dark text-white py-20 px-6 text-center">
+        <h2 class="font-serif text-3xl md:text-4xl mb-4">Cada rosto exige estratégia</h2>
+        <p class="font-sans font-light text-white/80 max-w-xl mx-auto mb-10 leading-relaxed text-sm">
+            Agende sua avaliação e descubra o protocolo ideal para o rejuvenescimento natural que você merece.
+        </p>
+        <a href="https://wa.me/5521974518848"
+            class="inline-flex items-center gap-2 bg-[#D4A392] text-white px-8 py-4 rounded-full text-sm font-medium tracking-wide hover:bg-white hover:text-[#4A4646] transition-all">
+            Agendar avaliação
+        </a>
+    </section>
+
+    <!-- 4. CONTEUDO EDUCATIVO -->
+    <section data-aos="fade-up" class="py-24 px-6 bg-[#FDFBF7]">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="font-sans text-xs tracking-[0.2em] uppercase text-brand-rose font-semibold mb-3">Conteúdo
+                    Educativo</h3>
+                <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-4">Conhecimento que transforma</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-10 h-10 bg-brand-rose/10 rounded-full flex items-center justify-center mb-6 text-brand-rose">
+                        ✦
+                    </div>
+                    <h4 class="font-serif text-xl mb-3 text-brand-dark">Lentes e Facetas</h4>
+                    <p class="font-sans font-light text-sm text-brand-gray leading-relaxed">
+                        Transformações sutis ou completas com resinas de alta performance ou porcelana, respeitando o
+                        formato original.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-10 h-10 bg-brand-rose/10 rounded-full flex items-center justify-center mb-6 text-brand-rose">
+                        ✦
+                    </div>
+                    <h4 class="font-serif text-xl mb-3 text-brand-dark">Clareamento Estético</h4>
+                    <p class="font-sans font-light text-sm text-brand-gray leading-relaxed">
+                        Técnicas avançadas para devolver a luminosidade natural e harmonia entre as proporções dos
+                        dentes.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-10 h-10 bg-brand-rose/10 rounded-full flex items-center justify-center mb-6 text-brand-rose">
+                        ✦
+                    </div>
+                    <h4 class="font-serif text-xl mb-3 text-brand-dark">Estética Regenerativa</h4>
+                    <p class="font-sans font-light text-sm text-brand-gray leading-relaxed">
+                        A importância de um acompanhamento especializado para resultados seguros na textura e qualidade
+                        da pele madura.
+                    </p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-10 h-10 bg-brand-rose/10 rounded-full flex items-center justify-center mb-6 text-brand-rose">
+                        ✦
+                    </div>
+                    <h4 class="font-serif text-xl mb-3 text-brand-dark">Bioestimuladores</h4>
+                    <p class="font-sans font-light text-sm text-brand-gray leading-relaxed">
+                        Devolvendo volume e firmeza com precisão, gerenciando o envelhecimento de forma tridimensional.
+                    </p>
+                </div>
+                <!-- Card 5 -->
+                <div
+                    class="bg-white p-8 rounded-3xl shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-10 h-10 bg-brand-rose/10 rounded-full flex items-center justify-center mb-6 text-brand-rose">
+                        ✦
+                    </div>
+                    <h4 class="font-serif text-xl mb-3 text-brand-dark">Ácido Hialurônico</h4>
+                    <p class="font-sans font-light text-sm text-brand-gray leading-relaxed">
+                        Preenchimentos estratégicos para repor volume, hidratar profundamente e redefinir contornos faciais com elegância.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. METODO EXCLUSIVO (Layout Split para Valorizar Foto Vertical) -->
+    <section data-aos="fade-up" class="py-24 px-6 bg-[#FDFBF7]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="font-sans text-xs tracking-[0.2em] uppercase text-brand-rose font-semibold mb-3">Método Exclusivo</h3>
+                <h2 class="font-serif text-3xl md:text-5xl text-brand-dark mb-6">ODONTOLOGIA ESTÉTICA</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Coluna da Foto (Vertical e Nítida) -->
+                <div class="relative order-1 md:order-1">
+                    <div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+                        <img src="https://i.ibb.co/d4fTkCBR/sorayabbud.jpg" alt="Dra. Soray Abbud" 
+                             class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Detalhe Decorativo -->
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-rose/10 rounded-full -z-10 blur-2xl"></div>
+                </div>
+
+                <!-- Coluna do Conteúdo -->
+                <div class="space-y-10 order-2 md:order-2">
+                    <p class="font-sans font-light text-brand-gray text-base leading-relaxed mb-8">
+                        Um protocolo inovador que une ciência e tecnologia para promover rejuvenescimento com segurança, naturalidade e eficácia. Cada detalhe é pensado para mulheres que buscam o equilíbrio entre beleza e saúde.
+                    </p>
+
+                    <div class="space-y-8">
+                        <!-- Item -->
+                        <div class="flex gap-6 items-start group">
+                            <div class="w-12 h-12 rounded-full bg-white shadow-sm flex-shrink-0 flex items-center justify-center text-brand-rose border border-brand-rose/10 group-hover:bg-brand-rose group-hover:text-white transition-all">
+                                ✦
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-lg text-brand-dark mb-1">Filosofia Regenerativa</h4>
+                                <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">Abordagem multidimensional que atua nas camadas da pele, fugindo dos exageros.</p>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="flex gap-6 items-start group">
+                            <div class="w-12 h-12 rounded-full bg-white shadow-sm flex-shrink-0 flex items-center justify-center text-brand-rose border border-brand-rose/10 group-hover:bg-brand-rose group-hover:text-white transition-all">
+                                ✦
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-lg text-brand-dark mb-1">Personalização Total</h4>
+                                <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">Cada protocolo é único, respeitando a história e as necessidades do seu rosto.</p>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="flex gap-6 items-start group">
+                            <div class="w-12 h-12 rounded-full bg-white shadow-sm flex-shrink-0 flex items-center justify-center text-brand-rose border border-brand-rose/10 group-hover:bg-brand-rose group-hover:text-white transition-all">
+                                ✦
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-lg text-brand-dark mb-1">Resultados Progressivos</h4>
+                                <p class="font-sans font-light text-brand-gray text-sm leading-relaxed">Transformação gradual e natural, com acompanhamento em cada etapa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assinatura Manuscrita -->
+            <div class="mt-24 text-center">
+                <span class="text-brand-rose text-6xl font-script opacity-40 block mb-2">"</span>
+                <p class="font-serif text-xl italic text-brand-dark mb-6">O verdadeiro luxo é parecer que você sempre foi assim.</p>
+                <img src="logo-soray.png" alt="Logo Soray Abbud"
+                    class="w-64 md:w-80 mx-auto mt-6 mix-blend-multiply opacity-90">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-10 text-center border-t border-gray-100">
+        <p class="font-sans text-xs tracking-[0.2em] uppercase text-brand-gray font-medium mb-2">
+            ODONTOLOGIA ESTÉTICA
+        </p>
+        <p class="font-sans text-xs text-brand-gray/60 font-light">
+            CRO RJ 22421 • Botafogo, RJ<br>
+            Desenvolvido por MLee Digital
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+
+        function filterResults(category) {
+            const cards = document.querySelectorAll('.result-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            const container = document.getElementById('results-container');
+
+            // Update buttons
+            buttons.forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'todos' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    // Re-trigger AOS for visible cards
+                    card.classList.add('aos-animate');
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Scroll back to start of carousel
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+        }
+
+        function scrollCarousel(direction) {
+            const container = document.getElementById('results-container');
+            const cardWidth = container.querySelector('.result-card').offsetWidth;
+            const gap = 24; // gap-6
+            container.scrollBy({ left: direction * (cardWidth + gap), behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
